@@ -41,10 +41,8 @@ class CacheClearServiceProvider extends ServiceProvider {
      */
     public function boot()
     {
-        if ($this->app->runningInConsole()) {
-            $this->commands([
-                ClearExpiredCommand::class,
-            ]);
-        }
+        $this->commands([
+            ClearExpiredCommand::class,
+        ]);
     }
 }
